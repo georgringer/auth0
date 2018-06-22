@@ -1,0 +1,19 @@
+<f:layout name="Login"/>
+
+<f:section name="loginFormFields">
+    <div class="pull-right" id="my-signin2"></div>
+    <h1>{f:translate(key:'{LLL}backendLogin.switch.label')}</h1>
+    <f:if condition="{userInfo}">
+			<f:then>
+				<h3>{userInfo.name}</h3>
+				<code>{userInfo.sub}</code><br>
+				<img src="{userInfo.picture}" style="max-width:100px" class="pull-right"/>
+
+
+				<a class="btn btn-info" href="http://t3-master.vm/typo3/?loginProvider=1526966635&logout=1">logout</a>
+			</f:then>
+			<f:else>
+				oh no
+			</f:else>
+		</f:if>
+</f:section>
